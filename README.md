@@ -38,6 +38,7 @@ The project demonstrates production-grade healthcare data science practices incl
 
 ✅ Exploratory Data Analysis
 
+
 ✅ Feature Engineering
 
 ✅ Risk Stratification
@@ -435,7 +436,9 @@ http://localhost:8501
 
 ### Dashboard Preview
 
-![Streamlit Dashboard](reports/streamlit_app.png)
+![Streamlit Dashboard](reports/streamlit_app_01.png)
+![Streamlit prediction](reports/streamlit_app_02.png)
+
 
 ---
 
@@ -464,7 +467,8 @@ http://127.0.0.1:8000/docs
 
 ### FastAPI Preview
 
-![FastAPI Docs](reports/fastapi_docs.png)
+![FastAPI Docs](reports/CardioGuard_api.png)
+![FastAPI Docs](reports/CardioGuard_api_02.png)
 
 ---
 
