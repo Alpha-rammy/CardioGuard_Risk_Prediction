@@ -2,62 +2,71 @@
 
 **Python • Scikit-Learn • XGBoost • FastAPI • Streamlit • SHAP**
 
-**Predicting Cardiometabolic Disease Risk Using NHANES Data**
+**Advanced Healthcare Analytics & Cardiometabolic Risk Prediction Using NHANES Data**
 
 ---
 
 # 📋 Table of Contents
 
-- Overview
-- Business Context
-- Key Features
-- System Architecture
-- Project Structure
-- Technology Stack
-- Quick Start
-- Data Pipeline
-- Model Development
-- API Documentation
-- Evaluation Metrics
-- Clinical Impact
-- Roadmap
+* Overview
+* Project Scope
+* Business Context
+* Key Features
+* System Architecture
+* Project Structure
+* Technology Stack
+* Quick Start
+* Data Pipeline
+* Feature Engineering
+* Model Development
+* Model Performance
+* Explainability
+* Streamlit Dashboard
+* FastAPI Deployment
+* API Documentation
+* Evaluation Metrics
+* Roadmap
+* Author
 
 ---
 
 # 🎯 Overview
 
-CardioGuard is an end-to-end healthcare machine learning system designed to identify individuals at elevated cardiometabolic risk using demographic, anthropometric, laboratory, lifestyle, and blood pressure data.
+CardioGuard is an end-to-end healthcare machine learning system designed to identify individuals at elevated cardiometabolic risk using demographic, anthropometric, laboratory, blood pressure, and lifestyle factors derived from NHANES data.
 
-This project demonstrates production-grade healthcare data science practices including:
+The project demonstrates production-grade healthcare data science practices including:
 
-✅ Cardiometabolic Risk Prediction
+✅ Exploratory Data Analysis
 
-✅ Risk Stratification (Low / Moderate / High Risk)
+✅ Feature Engineering
 
-✅ Advanced Feature Engineering
+✅ Risk Stratification
 
-✅ Explainable AI using SHAP
+✅ Machine Learning Modeling
 
-✅ FastAPI REST API
+✅ Explainable AI (SHAP)
 
-✅ Streamlit Risk Assessment Dashboard
+✅ FastAPI Deployment
 
-✅ End-to-End Deployment Pipeline
+✅ Streamlit Dashboard
+
+✅ End-to-End Healthcare Analytics Pipeline
 
 ---
 
 # 📊 Project Scope
 
-| Metric | Value |
-|----------|----------|
-| Industry | Healthcare Analytics |
-| Dataset | NHANES 2017–2018 |
-| Population | US Adults |
-| Records | ~1,850 participants |
-| Features | 30+ engineered variables |
-| Target | High Cardiometabolic Risk |
-| Models | Logistic Regression, Random Forest, XGBoost |
-| Deployment | FastAPI + Streamlit |
+| Metric       | Value                                       |
+| ------------ | ------------------------------------------- |
+| Industry     | Healthcare Analytics                        |
+| Dataset      | NHANES 2017–2018                            |
+| Population   | US Adults                                   |
+| Records      | ~1,850 Participants                         |
+| Features     | 30+ Engineered Variables                    |
+| Models       | Logistic Regression, Random Forest, XGBoost |
+| Best Model   | XGBoost                                     |
+| Best ROC-AUC | 0.9036                                      |
+| Deployment   | FastAPI + Streamlit                         |
 
 ---
 
@@ -67,29 +76,45 @@ This project demonstrates production-grade healthcare data science practices inc
 
 Cardiometabolic diseases remain among the leading causes of morbidity and mortality worldwide.
 
-Healthcare providers often face:
+Healthcare systems face significant challenges:
 
-📈 Increasing burden of diabetes
+📈 Rising prevalence of diabetes
 
-📈 Rising obesity prevalence
+📈 Increasing obesity rates
 
 📈 Undiagnosed hypertension
 
 📈 Delayed risk identification
 
-📈 Limited prevention-focused analytics
+📈 Escalating healthcare costs
+
+Traditional screening approaches often identify high-risk individuals only after disease progression has occurred.
 
 ---
 
 ## The Solution
 
-CardioGuard provides:
+CardioGuard provides a data-driven healthcare intelligence platform capable of:
 
-- Early identification of high-risk individuals
-- Automated risk stratification
-- Real-time risk scoring
-- Explainable predictions
-- Population health insights
+* Early identification of high-risk individuals
+* Automated risk stratification
+* Explainable machine learning predictions
+* Real-time risk scoring
+* Population health analytics
+
+---
+
+## Business Impact
+
+🎯 Earlier identification of high-risk individuals
+
+💰 Potential reduction in long-term healthcare costs
+
+📈 Improved preventive healthcare interventions
+
+⚡ Real-time risk assessment through deployed APIs
+
+🏥 Supports population health management strategies
 
 ---
 
@@ -97,88 +122,93 @@ CardioGuard provides:
 
 ## 🎯 Cardiometabolic Risk Prediction
 
-Predicts likelihood of high cardiometabolic risk.
-
 Models evaluated:
 
-- Logistic Regression
-- Random Forest
-- XGBoost
+* Logistic Regression
+* Random Forest
+* XGBoost
+
+Best Model:
+
+🏆 XGBoost Classifier
+
+ROC-AUC = 0.9036
 
 ---
 
 ## 📊 Risk Stratification
 
-Patients are grouped into:
+Patients were segmented into:
 
-| Risk Group | Description |
-|------------|------------|
-| Low Risk | Minimal intervention |
-| Moderate Risk | Lifestyle modification |
-| High Risk | Early clinical intervention |
+* Low Risk
+* Moderate Risk
+* High Risk
+
+using K-Means clustering to support population-level health management.
 
 ---
 
 ## 🧠 Explainable AI
 
-SHAP values used to explain:
+SHAP was used to explain model predictions and identify major risk drivers.
 
-- BMI impact
-- Waist circumference
-- Blood pressure contribution
-- Glucose contribution
-- Cholesterol contribution
+Top predictors included:
+
+* HbA1c
+* Fasting Glucose
+* BMI
+* Waist Circumference
+* Blood Pressure
+* Cholesterol Indicators
 
 ---
 
 ## 🚀 Production API
 
-Built with FastAPI.
+FastAPI deployment providing:
 
-Supports:
-
-- Real-time scoring
-- Risk classification
-- JSON responses
-- Interactive Swagger documentation
+* Real-time scoring
+* Swagger documentation
+* JSON responses
+* Production-ready architecture
 
 ---
 
-## 📈 Streamlit Dashboard
+## 📊 Interactive Dashboard
 
-Interactive risk calculator:
+Streamlit dashboard enabling:
 
-- Patient inputs
-- Risk probability
-- Risk band classification
-- Clinical interpretation
+* Patient-level risk prediction
+* Risk probability scoring
+* Risk band classification
+* Clinical interpretation
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-Raw NHANES Data
-        │
-        ▼
+NHANES Data
+      │
+      ▼
 Preprocessing
-        │
-        ▼
+      │
+      ▼
 Feature Engineering
-        │
-        ▼
-Model Training
-        │
-        ▼
-Risk Stratification
-        │
-        ▼
+      │
+      ▼
+Risk Segmentation
+      │
+      ▼
+Machine Learning Modeling
+      │
+      ▼
 SHAP Explainability
-        │
-        ▼
+      │
+      ▼
 FastAPI Deployment
-        │
-        ▼
+      │
+      ▼
 Streamlit Dashboard
 ```
 
@@ -188,7 +218,6 @@ Streamlit Dashboard
 
 ```text
 CardioGuard_Project/
-
 │
 ├── data/
 │   ├── raw/
@@ -203,14 +232,12 @@ CardioGuard_Project/
 │   ├── 06_explainability.ipynb
 │   └── 07_dashboard_export.ipynb
 │
-├── src/
-│   ├── preprocessing.py
-│   ├── feature_engineering.py
-│   ├── train_model.py
-│   ├── predict.py
-│   │
-│   └── api/
-│       └── main.py
+├── reports/
+│   ├── roc_curve.png
+│   ├── confusion_matrix.png
+│   ├── shap_summary.png
+│   ├── streamlit_app.png
+│   └── fastapi_docs.png
 │
 ├── models/
 │   ├── cardioguard_best_model.pkl
@@ -220,6 +247,14 @@ CardioGuard_Project/
 │   ├── cardioguard_scaler_segmentation.pkl
 │   └── cardioguard_segmentation_feature_cols.pkl
 │
+├── src/
+│   ├── preprocessing.py
+│   ├── feature_engineering.py
+│   ├── train_model.py
+│   ├── predict.py
+│   └── api/
+│       └── main.py
+│
 ├── streamlit_app.py
 ├── requirements.txt
 ├── .gitignore
@@ -228,100 +263,107 @@ CardioGuard_Project/
 
 ---
 
-# 🛠 Technology Stack
+# 🛠️ Technology Stack
 
-| Category | Technologies |
-|-----------|-------------|
+| Category         | Technologies          |
+| ---------------- | --------------------- |
 | Machine Learning | Scikit-Learn, XGBoost |
-| Data Processing | Pandas, NumPy |
-| Visualization | Matplotlib, Seaborn |
-| Explainability | SHAP |
-| API | FastAPI |
-| Dashboard | Streamlit |
-| Deployment | Uvicorn |
+| Data Processing  | Pandas, NumPy         |
+| Visualization    | Matplotlib, Seaborn   |
+| Explainability   | SHAP                  |
+| API Framework    | FastAPI               |
+| Dashboard        | Streamlit             |
+| Deployment       | Uvicorn               |
+| Version Control  | Git, GitHub           |
 
 ---
 
 # 🚀 Quick Start
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/Alpha-rammy/CardioGuard_Risk_Prediction.git
+cd CardioGuard_Risk_Prediction
 ```
 
-### Create Virtual Environment
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### Activate Environment
+## Activate Environment
 
 ```bash
 venv\Scripts\activate
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Train Model
+
+```bash
+python src/train_model.py
 ```
 
 ---
 
 # 📊 Data Pipeline
 
-NHANES datasets used:
+Data Sources:
 
-- Demographics
-- Body Measures
-- Blood Pressure
-- Glucose
-- HbA1c
-- Total Cholesterol
-- HDL Cholesterol
-- Smoking
-- Physical Activity
+* Demographics
+* Body Measures
+* Blood Pressure
+* Glucose
+* HbA1c
+* Cholesterol
+* Smoking Questionnaire
+* Physical Activity Questionnaire
 
 ---
 
 # 🔧 Feature Engineering
 
-Features include:
+Features engineered include:
 
-### Anthropometric
+### Anthropometric Features
 
-- BMI
-- Waist Circumference
-- Waist-to-Height Ratio
+* BMI
+* Waist Circumference
+* Waist-to-Height Ratio
 
-### Blood Pressure
+### Blood Pressure Features
 
-- Systolic BP
-- Diastolic BP
-- Pulse Pressure
-- Mean Arterial Pressure
+* Systolic Blood Pressure
+* Diastolic Blood Pressure
+* Pulse Pressure
+* Mean Arterial Pressure
 
-### Metabolic
+### Metabolic Features
 
-- Fasting Glucose
-- HbA1c
-- Total Cholesterol
-- HDL Cholesterol
-- LDL Cholesterol
+* Fasting Glucose
+* HbA1c
+* Total Cholesterol
+* HDL Cholesterol
+* LDL Cholesterol
 
-### Lifestyle
+### Lifestyle Features
 
-- Smoking Status
-- Physical Activity
+* Smoking Status
+* Physical Activity
 
-### Clinical Risk Indicators
+### Clinical Indicators
 
-- Obesity Flag
-- Hypertension Flag
-- Diabetes Flag
-- Hyperlipidemia Flag
+* Obesity Flag
+* Diabetes Flag
+* Hypertension Flag
+* Hyperlipidemia Flag
 
 ---
 
@@ -329,33 +371,104 @@ Features include:
 
 ## Models Evaluated
 
-| Model | ROC-AUC |
-|---------|---------|
-| Logistic Regression | 0.8827 |
-| Random Forest | 0.8895 |
-| XGBoost | 0.9036 |
-
-### Best Model
-
-🏆 XGBoost
-
-ROC-AUC = 0.9036
+| Model               | ROC-AUC |
+| ------------------- | ------- |
+| Logistic Regression | 0.8827  |
+| Random Forest       | 0.8895  |
+| XGBoost             | 0.9036  |
 
 ---
 
-# 📡 API Documentation
+# 🏆 Model Performance
 
-### Start API
+Best Model:
+
+**XGBoost**
+
+ROC-AUC = **0.9036**
+
+---
+
+# 📈 ROC Curve
+
+![ROC Curve](reports/roc_curve.png)
+
+---
+
+# 📈 Confusion Matrix
+
+![Confusion Matrix](reports/confusion_matrix.png)
+
+---
+
+# 🧠 Explainability
+
+SHAP was used to understand how each feature contributes to model predictions.
+
+![SHAP Summary](reports/shap_summary.png)
+
+---
+
+# 📊 Streamlit Dashboard
+
+The Streamlit application provides an interactive interface for healthcare professionals and analysts to perform real-time cardiometabolic risk assessments.
+
+### Dashboard Features
+
+* Patient-level risk prediction
+* Risk probability scoring
+* Risk band classification
+* Clinical interpretation
+* User-friendly interface
+
+### Run Dashboard
+
+```bash
+streamlit run streamlit_app.py
+```
+
+### Access Dashboard
+
+```text
+http://localhost:8501
+```
+
+### Dashboard Preview
+
+![Streamlit Dashboard](reports/streamlit_app.png)
+
+---
+
+# 🚀 FastAPI Deployment
+
+The trained XGBoost model is exposed through a FastAPI REST API.
+
+### API Features
+
+* Real-time prediction
+* JSON responses
+* Swagger documentation
+* Production-ready deployment
+
+### Run FastAPI
 
 ```bash
 uvicorn src.api.main:app --reload
 ```
 
-### Swagger Documentation
+### Access Swagger Documentation
 
 ```text
 http://127.0.0.1:8000/docs
 ```
+
+### FastAPI Preview
+
+![FastAPI Docs](reports/fastapi_docs.png)
+
+---
+
+# 📡 API Documentation
 
 ### Example Response
 
@@ -371,52 +484,52 @@ http://127.0.0.1:8000/docs
 
 # 📈 Evaluation Metrics
 
-### XGBoost Performance
+Model evaluation included:
 
-| Metric | Value |
-|----------|----------|
-| ROC-AUC | 0.9036 |
-| Precision | 0.90 |
-| Recall | 0.89 |
-| F1 Score | 0.89 |
-
----
-
-# 🩺 Clinical Impact
-
-CardioGuard enables:
-
-✅ Early disease prevention
-
-✅ Population health monitoring
-
-✅ Risk-based screening
-
-✅ Clinical decision support
-
-✅ Resource prioritization
+* ROC-AUC
+* Precision
+* Recall
+* F1 Score
+* Confusion Matrix
+* SHAP Explainability
 
 ---
 
 # 🔮 Roadmap
 
-### Phase 1
+## Phase 1
 
-- Data Cleaning
-- Feature Engineering
-- Baseline Models
+✅ Data Cleaning
 
-### Phase 2
+✅ Feature Engineering
 
-- SHAP Explainability
-- FastAPI Deployment
-- Streamlit Dashboard
+✅ Risk Stratification
 
-### Phase 3
+✅ Machine Learning Modeling
 
-- Docker Deployment
-- Cloud Hosting
-- NHS Integration Simulation
+---
+
+## Phase 2
+
+✅ SHAP Explainability
+
+✅ FastAPI Deployment
+
+✅ Streamlit Dashboard
+
+---
+
+## Phase 3
+
+⬜ Docker Deployment
+
+⬜ Cloud Hosting
+
+⬜ Real-Time Monitoring
+
+⬜ Population Health Dashboard
+
+⬜ NHS Integration Simulation
 
 ---
 
@@ -424,6 +537,11 @@ CardioGuard enables:
 
 **Ransom Chukwu**
 
+
 GitHub: https://github.com/Alpha-rammy
 
 ---
+
+## License
+
+This project is intended for educational, research, and portfolio purposes.
